@@ -1,4 +1,5 @@
 /* General Page Styling */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f8f5;
@@ -6,17 +7,20 @@ body {
     margin: 0;
     padding: 20px;
     
-    /* 1. Set display to flex */
+    /* These three lines force everything to stack top-to-bottom */
     display: flex;
-    
-    /* 2. Change direction to column so elements stack vertically */
-    flex-direction: column; 
-    
-    /* 3. Center everything horizontally */
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     
     min-height: 100vh;
 }
+/* Ensure all main sections take up the full width and stack vertically */
+body > section, 
+body > div, 
+.container {
+    width: 100%;
+    max-width: 900px; /* Limits width so it looks good on wide screens */
+    margin-bottom: 24px; /* Creates vertical spacing between cards */
 }
 
 /* App Container (Card Style) */
