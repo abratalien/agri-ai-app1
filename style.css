@@ -1,5 +1,8 @@
 /* General Page Styling */
-
+/* Force the header to stretch 100% across the top */
+header {
+    width: 100%;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f8f5;
