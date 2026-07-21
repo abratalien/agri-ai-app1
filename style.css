@@ -71,3 +71,9 @@ p {
     text-align: left;
     display: none; /* Hidden by default until button click */
 }
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
