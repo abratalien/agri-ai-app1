@@ -5,10 +5,18 @@ body {
     color: #2c3e50;
     margin: 0;
     padding: 20px;
+    
+    /* 1. Set display to flex */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    /* 2. Change direction to column so elements stack vertically */
+    flex-direction: column; 
+    
+    /* 3. Center everything horizontally */
+    align-items: center; 
+    
     min-height: 100vh;
+}
 }
 
 /* App Container (Card Style) */
