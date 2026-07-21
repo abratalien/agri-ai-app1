@@ -1,1 +1,65 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f8f5;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+/* App Container (Card Style) */
+.app-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.4rem;
+    color: #2e7d32; /* Agricultural Green */
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+/* Action Button */
+.btn-primary {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1b5e20;
+}
+
+/* Output Result Box */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    border-radius: 6px;
+    text-align: left;
+    display: none; /* Hidden by default until button click */
+}
