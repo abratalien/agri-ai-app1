@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Adaptable App to Sustain Agriculture | EWIT Mini Project</title>
+    <!-- Tailwind CSS CDN for instant styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header Navigation -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wide">AgriAI Assistant</h1>
+            <nav class="space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#architecture" class="hover:underline">Architecture</a>
+                <a href="#demo" class="hover:underline">AI Demo</a>
+                <a href="#team" class="hover:underline">Team</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">AI-Adaptable Platform to Sustain Agriculture</h2>
+            <p class="text-lg opacity-90 mb-8">Empowering farmers with real-time IoT monitoring, machine learning insights, smart crop recommendations, and pest management.</p>
+            <a href="#demo" class="bg-white text-emerald-800 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">Try Live AI Demo</a>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="about" class="max-w-7xl mx-auto py-16 px-4 grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="text-emerald-600 font-bold text-lg mb-2">🌱 Precision Irrigation</div>
+            <p class="text-gray-600 text-sm">Automatically analyzes soil moisture and weather patterns to adjust watering schedules and eliminate resource waste.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="text-emerald-600 font-bold text-lg mb-2">🔍 Early Pest Detection</div>
+            <p class="text-gray-600 text-sm">Employs computer vision to scan leaf photos and identify diseases early, providing targeted chemical-free solutions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="text-emerald-600 font-bold text-lg mb-2">📊 Adaptive AI Model</div>
+            <p class="text-gray-600 text-sm">Continuously learns from farm inputs and local weather trends to optimize yield predictions over time.</p>
+        </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section id="architecture" class="bg-white py-16 border-t border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">System Architecture & Flow</h3>
+            <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200 inline-block text-left w-full max-w-2xl">
+                <div class="flex flex-col space-y-3 font-mono text-sm">
+                    <div class="p-3 bg-white rounded shadow-sm border">📱 Mobile Application Interface</div>
+                    <div class="text-center font-bold text-emerald-600">↓ (HTTP / REST API)</div>
+                    <div class="p-3 bg-white rounded shadow-sm border">⚙️ Backend Server (Python / Node.js)</div>
+                    <div class="flex justify-between gap-4">
+                        <div class="p-3 bg-white rounded shadow-sm border w-1/2 text-center">🤖 AI Machine Learning Model</div>
+                        <div class="p-3 bg-white rounded shadow-sm border w-1/2 text-center">📡 IoT Soil & Weather Sensors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive AI Recommendation Mockup/Demo -->
+    <section id="demo" class="max-w-4xl mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Test AI Crop Recommendation</h3>
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Soil Moisture Level (%)</label>
+                    <input id="moisture" type="number" placeholder="e.g. 45" class="w-full border p-2 rounded focus:ring-2 focus:ring-emerald-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Temperature (°C)</label>
+                    <input id="temp" type="number" placeholder="e.g. 28" class="w-full border p-2 rounded focus:ring-2 focus:ring-emerald-500 outline-none">
+                </div>
+            </div>
+            <button onclick="getRecommendation()" class="w-full bg-emerald-600 text-white font-bold py-2 rounded hover:bg-emerald-700 transition">Analyze & Recommend</button>
+            
+            <div id="result" class="mt-6 p-4 rounded-lg bg-gray-50 hidden">
+                <h4 class="font-bold text-emerald-800 mb-1">AI Recommendation:</h4>
+                <p id="recommendationText" class="text-sm text-gray-700"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team & Guidance Credits -->
+    <section id="team" class="bg-gray-100 py-12">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-2">East West Institute of Technology</h3>
+            <p class="text-sm text-gray-600 mb-6">Department of Computer Science & Engineering | BCS586 Mini Project</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-semibold">
+                <div class="p-3 bg-white rounded shadow-sm">Saadhan D A<br><span class="text-xs text-gray-500 font-normal">1EW23CS126</span></div>
+                <div class="p-3 bg-white rounded shadow-sm">Sharath K<br><span class="text-xs text-gray-500 font-normal">1EW23CS136</span></div>
+                <div class="p-3 bg-white rounded shadow-sm">Sohan R T<br><span class="text-xs text-gray-500 font-normal">1EW23CS145</span></div>
+                <div class="p-3 bg-white rounded shadow-sm">Tejas Kumar T<br><span class="text-xs text-gray-500 font-normal">1EW23CS156</span></div>
+            </div>
+            <p class="mt-6 text-xs text-gray-500">Under the Guidance of: Prof. Sushmitha B R | HOD: Dr. Achyutha Prasad N</p>
+        </div>
+    </section>
+
+    <!-- JavaScript Logic -->
+    <script>
+        function getRecommendation() {
+            const moisture = document.getElementById('moisture').value;
+            const temp = document.getElementById('temp').value;
+            const resultDiv = document.getElementById('result');
+            const recommendationText = document.getElementById('recommendationText');
+
+            if (!moisture || !temp) {
+                alert('Please enter both moisture and temperature values.');
+                return;
+            }
+
+            resultDiv.classList.remove('hidden');
+
+            if (moisture < 30) {
+                recommendationText.innerText = "Soil moisture is low. Recommended Action: Trigger automated precision irrigation for 20 minutes. Optimal crops for current condition: Millets or Pulses.";
+            } else if (temp > 35) {
+                recommendationText.innerText = "High environmental temperature detected. Recommended Action: Monitor crop heat stress and schedule early-morning irrigation.";
+            } else {
+                recommendationText.innerText = "Soil conditions and temperature are optimal! Recommended Action: Maintain standard crop management schedule.";
+            }
+        }
+    </script>
+</body>
+</html>
